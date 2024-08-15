@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio - Programa de Entrenamiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+        }
+
+        .duration {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .card {
+                margin: 10px;
+            }
+        }
+
+        /* Título llamativo para "Principiantes" */
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Título Principal -->	
+        <h5 class="p-3 mb-3 bg-dark text-white text-center shadow p-3 rounded mt-1">Principiantes</h5>
+
+        <div class="row justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="Imagenes/Foto1.jpeg" class="card-img-top" alt="Fase 1 - Adaptación">
+                    <div class="card-body">
+                        <h5 class="card-title">Fase 1: Adaptación</h5>
+                        <p class="duration">Duración: 4 semanas</p>
+                        <p class="card-text">En esta fase, te enfocarás en aprender la técnica correcta y en preparar tu cuerpo para el entrenamiento intenso que sigue.</p>
+                        <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="Imagenes/Foto2.jpeg" class="card-img-top" alt="Fase 2 - Fuerza y Resistencia">
+                    <div class="card-body">
+                        <h5 class="card-title">Fase 2: Fuerza y Resistencia</h5>
+                        <p class="duration">Duración: 4 semanas</p>
+                        <p class="card-text">Durante esta fase, aumentarás tu fuerza y resistencia, utilizando pesas más pesadas y ejercicios más desafiantes.</p>
+                        <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="Imagenes/Foto3.jpeg" class="card-img-top" alt="Fase 3 - Consolidación y Progresión">
+                    <div class="card-body">
+                        <h5 class="card-title">Fase 3: Consolidación y Progresión</h5>
+                        <p class="duration">Duración: 4 semanas</p>
+                        <p class="card-text">La fase final se centra en consolidar los logros alcanzados y prepararte para desafíos más avanzados.</p>
+                        <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
