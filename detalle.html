@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fase 1: Adaptación Inicial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body {
-            background-image: url('C:/Users/paleman/OneDrive - Universidad Autónoma de Tamaulipas/Desktop/PROCESOS/GIMNASIO/Proceso QR/Imagenes/fondo.webp');
             background-size: cover;
             background-color: #fff;
             color: #000;
@@ -70,6 +70,14 @@
             color: #000;
             font-size: 1rem;
             padding: 10px 0;
+            position: relative;
+        }
+
+        .list-group-item i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .day-title {
@@ -101,366 +109,395 @@
                 padding: 10px;
             }
         }
+
+        /* Sobrescribir estilo para el <hr> con clase 'linea' */
+        hr.linea {
+            border: 0 !important;
+            height: 5px !important;
+            background-color: #BB4A26 !important;
+            background-image: none !important;
+            background-repeat: no-repeat !important;
+            opacity: 1 !important;
+            margin: 0 !important;
+        }
+
+        /* Margen superior para compensar el header fijo */
+        .content-padding {
+            padding-top: 70px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Título Principal -->
-        <h5 class="p-3 mb-3 bg-dark text-white text-center shadow p-3 rounded mt-1">Principiantes</h5>
-        <h3 class="p-3 mb-3 bg-warning text-dark fw-light">Fase 1: Adaptación Inicial</h3>
+        <header class="d-flex justify-content-between align-items-center fixed-top py-2 border-bottom bg-white">
+            <!-- Logo 1 alineado a la izquierda -->
+            <div class="ms-2 me-2" style="flex: 1;">
+                <img src="C:/GITHUB/GIMNASIO/QR Estatico/Imagenes/LogoGimnasio.png" alt="Logo 1" class="img-fluid">
+            </div>
+        </header>
 
-        <hr class="featurette-divider">
-        
-        <div class="bg-light rounded p-1">
-        <p class="objective"><strong>Duración:</strong> Semanas 1-4</p>
-        <p class="objective"><strong>Objetivo:</strong> Familiarizar al usuario con los ejercicios, mejorar la técnica y preparar el cuerpo para un entrenamiento más intenso.</p>
-        
-        <div class="accordion accordion-flush bg-light" id="accordionFlushExample">
-        
-            <!-- Lunes -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Lunes - Rutina
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" onclick="showAlert('Calentamiento: 15 minutos de caminata en la cinta o bicicleta estática.')">
-                                <strong>Calentamiento:</strong> 15 minutos de caminata en la cinta o bicicleta estática.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
-                                <strong>Movilidad:</strong> Estiramiento y movilidad articular.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Pierna:</strong>
+        <!-- Espacio adicional para evitar que el contenido se superponga con el header fijo -->
+        <div class="content-padding">
+            <!-- Línea horizontal gruesa y naranja con clase 'linea' -->
+            <hr class="linea">
+
+            <!-- Título Principal -->
+            <h5 class="p-3 mb-3 bg-dark text-white text-center shadow p-3 rounded mt-1">Principiantes</h5>
+            <h3 class="p-3 mb-3 bg-warning text-dark fw-light">Fase 1: Adaptación Inicial</h3>
+
+            <hr class="featurette-divider">
+
+            <div class="bg-light rounded p-1">
+                <p class="objective"><strong>Duración:</strong> Semanas 1-4</p>
+                <p class="objective"><strong>Objetivo:</strong> Familiarizar al usuario con los ejercicios, mejorar la técnica y preparar el cuerpo para un entrenamiento más intenso.</p>
+
+                <div class="accordion accordion-flush bg-light" id="accordionFlushExample">
+
+                    <!-- Lunes -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Lunes - Rutina
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
                                 <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Extensión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Extensión de Pierna)')">
-                                        Extensión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Extensión de Pierna)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
+                                    <li class="list-group-item" onclick="showAlert('Calentamiento: 15 minutos de caminata en la cinta o bicicleta estática.')">
+                                        <strong>Calentamiento:</strong> 15 minutos de caminata en la cinta o bicicleta estática.
+                                        
                                     </li>
-                                    <li class="list-group-item" onclick="showAlert('Flexión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Flexión de Pierna)')">
-                                        Flexión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Flexión de Pierna)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
+                                    <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
+                                        <strong>Movilidad:</strong> Estiramiento y movilidad articular.
+                                        
                                     </li>
-                                    <li class="list-group-item" onclick="showAlert('Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. (Sin aparato)')">
-                                        Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. <em>(Sin aparato)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
+                                    <li class="list-group-item">
+                                        <strong>Pierna:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Extensión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Extensión de Pierna)')">
+                                                Extensión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Extensión de Pierna)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Flexión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Flexión de Pierna)')">
+                                                Flexión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Flexión de Pierna)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. (Sin aparato)')">
+                                                Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. <em>(Sin aparato)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. (Sin aparato)')">
+                                                Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. <em>(Sin aparato)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Abductor: 3 series de 12-15 repeticiones. (Máquina de Abductores)')">
+                                                Abductor: 3 series de 12-15 repeticiones. <em>(Máquina de Abductores)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Aductor: 3 series de 12-15 repeticiones. (Máquina de Adductores)')">
+                                                Aductor: 3 series de 12-15 repeticiones. <em>(Máquina de Adductores)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Pantorrilla Sentada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Sentada)')">
+                                                Pantorrilla Sentada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Sentada)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Pantorrilla Parada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Parada o plataforma elevada)')">
+                                                Pantorrilla Parada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Parada o plataforma elevada)</em>
+                                                
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li class="list-group-item" onclick="showAlert('Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. (Sin aparato)')">
-                                        Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. <em>(Sin aparato)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
+                                    <li class="list-group-item" onclick="showAlert('Cardio: 30 minutos en bicicleta estática o caminadora.')">
+                                        <strong>Cardio:</strong> 30 minutos en bicicleta estática o caminadora.
+                                        
                                     </li>
-                                    <li class="list-group-item" onclick="showAlert('Abductor: 3 series de 12-15 repeticiones. (Máquina de Abductores)')">
-                                        Abductor: 3 series de 12-15 repeticiones. <em>(Máquina de Abductores)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Aductor: 3 series de 12-15 repeticiones. (Máquina de Adductores)')">
-                                        Aductor: 3 series de 12-15 repeticiones. <em>(Máquina de Adductores)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Pantorrilla Sentada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Sentada)')">
-                                        Pantorrilla Sentada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Sentada)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Pantorrilla Parada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Parada o plataforma elevada)')">
-                                        Pantorrilla Parada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Parada o plataforma elevada)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
+                                    <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
+                                        <strong>Estiramiento:</strong> Estiramiento general.
+                                        
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Cardio: 30 minutos en bicicleta estática o caminadora.')">
-                                <strong>Cardio:</strong> 30 minutos en bicicleta estática o caminadora.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
-                                <strong>Estiramiento:</strong> Estiramiento general.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Martes -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Martes - Rutina
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item" onclick="showAlert('Calentamiento: 30 minutos en bicicleta o caminadora.')">
+                                        <strong>Calentamiento:</strong> 30 minutos en bicicleta o caminadora.
+                                        
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
+                                        <strong>Movilidad:</strong> Estiramiento y movilidad articular.
+                                        
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Hombro:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Elevación Frontal Alternada con Disco: 3 series de 12-15 repeticiones. (Disco)')">
+                                                Elevación Frontal Alternada con Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Elevaciones Laterales con Disco: 3 series de 12-15 repeticiones. (Disco)')">
+                                                Elevaciones Laterales con Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Elevación Frontal con un Solo Disco: 3 series de 12-15 repeticiones. (Disco)')">
+                                                Elevación Frontal con un Solo Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Bíceps:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Curl Martillo con Disco o Mancuerna: 3 series de 12-15 repeticiones. (Disco o Mancuernas)')">
+                                                Curl Martillo con Disco o Mancuerna: 3 series de 12-15 repeticiones. <em>(Disco o Mancuernas)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Curl Alternado con Disco o Mancuerna: 3 series de 12-15 repeticiones por brazo. (Disco o Mancuernas)')">
+                                                Curl Alternado con Disco o Mancuerna: 3 series de 12-15 repeticiones por brazo. <em>(Disco o Mancuernas)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Curl con Barra: 3 series de 12-15 repeticiones. (Barra)')">
+                                                Curl con Barra: 3 series de 12-15 repeticiones. <em>(Barra)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Tríceps:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Copa a Dos Manos con Disco: 3 series de 12-15 repeticiones. (Disco)')">
+                                                Copa a Dos Manos con Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Patada de Mula: 3 series de 12-15 repeticiones por brazo. (Mancuernas)')">
+                                                Patada de Mula: 3 series de 12-15 repeticiones por brazo. <em>(Mancuernas)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Fondos: 3 series de 10-12 repeticiones. (Banco firme o Máquina de Fondos)')">
+                                                Fondos: 3 series de 10-12 repeticiones. <em>(Banco firme o Máquina de Fondos)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
+                                        <strong>Estiramiento:</strong> Estiramiento general.
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miércoles -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Miércoles - Rutina
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item" onclick="showAlert('Calentamiento: 15 minutos de caminata en la cinta o bicicleta estática.')">
+                                        <strong>Calentamiento:</strong> 15 minutos de caminata en la cinta o bicicleta estática.
+                                        
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
+                                        <strong>Movilidad:</strong> Estiramiento y movilidad articular.
+                                        
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Pierna:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Extensión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Extensión de Pierna)')">
+                                                Extensión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Extensión de Pierna)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Flexión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Flexión de Pierna)')">
+                                                Flexión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Flexión de Pierna)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. (Sin aparato)')">
+                                                Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. <em>(Sin aparato)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. (Sin aparato)')">
+                                                Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. <em>(Sin aparato)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Abductor: 3 series de 12-15 repeticiones. (Máquina de Abductores)')">
+                                                Abductor: 3 series de 12-15 repeticiones. <em>(Máquina de Abductores)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Aductor: 3 series de 12-15 repeticiones. (Máquina de Adductores)')">
+                                                Aductor: 3 series de 12-15 repeticiones. <em>(Máquina de Adductores)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Pantorrilla Sentada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Sentada)')">
+                                                Pantorrilla Sentada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Sentada)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Pantorrilla Parada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Parada o plataforma elevada)')">
+                                                Pantorrilla Parada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Parada o plataforma elevada)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Cardio: 30 minutos en bicicleta estática o caminadora.')">
+                                        <strong>Cardio:</strong> 30 minutos en bicicleta estática o caminadora.
+                                        
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
+                                        <strong>Estiramiento:</strong> Estiramiento general.
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jueves -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Jueves - Rutina
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item" onclick="showAlert('Calentamiento: 30 minutos en bicicleta o caminadora.')">
+                                        <strong>Calentamiento:</strong> 30 minutos en bicicleta o caminadora.
+                                        
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
+                                        <strong>Movilidad:</strong> Estiramiento y movilidad articular.
+                                        
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Espalda:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Jalón al Frente: 3 series de 12-15 repeticiones. (Máquina de Jalón al Frente)')">
+                                                Jalón al Frente: 3 series de 12-15 repeticiones. <em>(Máquina de Jalón al Frente)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Jalón a la Cintura: 3 series de 12-15 repeticiones. (Máquina de Remo Sentado)')">
+                                                Jalón a la Cintura: 3 series de 12-15 repeticiones. <em>(Máquina de Remo Sentado)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Peck Deck Invertido (Reverse Fly): 3 series de 12-15 repeticiones. (Máquina Peck Deck - configurada para ejercicio de espalda)')">
+                                                Peck Deck Invertido (Reverse Fly): 3 series de 12-15 repeticiones. <em>(Máquina Peck Deck - configurada para ejercicio de espalda)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Pecho:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Peck Deck: 3 series de 12-15 repeticiones. (Máquina Peck Deck)')">
+                                                Peck Deck: 3 series de 12-15 repeticiones. <em>(Máquina Peck Deck)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Press en Máquina para Pecho (Agarre Cerrado): 3 series de 12-15 repeticiones. (Máquina de Press de Pecho)')">
+                                                Press en Máquina para Pecho (Agarre Cerrado): 3 series de 12-15 repeticiones. <em>(Máquina de Press de Pecho)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Press en Máquina para Pecho (Agarre Abierto): 3 series de 12-15 repeticiones. (Máquina de Press de Pecho)')">
+                                                Press en Máquina para Pecho (Agarre Abierto): 3 series de 12-15 repeticiones. <em>(Máquina de Press de Pecho)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
+                                        <strong>Estiramiento:</strong> Estiramiento general.
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Viernes -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                Viernes - Rutina
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item" onclick="showAlert('Calentamiento: 15 minutos de caminata en la cinta o bicicleta estática.')">
+                                        <strong>Calentamiento:</strong> 15 minutos de caminata en la cinta o bicicleta estática.
+                                        
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
+                                        <strong>Movilidad:</strong> Estiramiento y movilidad articular.
+                                        
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Pierna:</strong>
+                                        <ul class="list-group">
+                                            <li class="list-group-item" onclick="showAlert('Extensión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Extensión de Pierna)')">
+                                                Extensión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Extensión de Pierna)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Flexión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Flexión de Pierna)')">
+                                                Flexión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Flexión de Pierna)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. (Sin aparato)')">
+                                                Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. <em>(Sin aparato)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. (Sin aparato)')">
+                                                Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. <em>(Sin aparato)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Abductor: 3 series de 12-15 repeticiones. (Máquina de Abductores)')">
+                                                Abductor: 3 series de 12-15 repeticiones. <em>(Máquina de Abductores)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Aductor: 3 series de 12-15 repeticiones. (Máquina de Adductores)')">
+                                                Aductor: 3 series de 12-15 repeticiones. <em>(Máquina de Adductores)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Pantorrilla Sentada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Sentada)')">
+                                                Pantorrilla Sentada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Sentada)</em>
+                                                
+                                            </li>
+                                            <li class="list-group-item" onclick="showAlert('Pantorrilla Parada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Parada o plataforma elevada)')">
+                                                Pantorrilla Parada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Parada o plataforma elevada)</em>
+                                                
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Cardio: 30 minutos en bicicleta estática o caminadora.')">
+                                        <strong>Cardio:</strong> 30 minutos en bicicleta estática o caminadora.
+                                        
+                                    </li>
+                                    <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
+                                        <strong>Estiramiento:</strong> Estiramiento general.
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Martes -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Martes - Rutina
-                    </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" onclick="showAlert('Calentamiento: 30 minutos en bicicleta o caminadora.')">
-                                <strong>Calentamiento:</strong> 30 minutos en bicicleta o caminadora.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
-                                <strong>Movilidad:</strong> Estiramiento y movilidad articular.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Hombro:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Elevación Frontal Alternada con Disco: 3 series de 12-15 repeticiones. (Disco)')">
-                                        Elevación Frontal Alternada con Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Elevaciones Laterales con Disco: 3 series de 12-15 repeticiones. (Disco)')">
-                                        Elevaciones Laterales con Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Elevación Frontal con un Solo Disco: 3 series de 12-15 repeticiones. (Disco)')">
-                                        Elevación Frontal con un Solo Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Bíceps:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Curl Martillo con Disco o Mancuerna: 3 series de 12-15 repeticiones. (Disco o Mancuernas)')">
-                                        Curl Martillo con Disco o Mancuerna: 3 series de 12-15 repeticiones. <em>(Disco o Mancuernas)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Curl Alternado con Disco o Mancuerna: 3 series de 12-15 repeticiones por brazo. (Disco o Mancuernas)')">
-                                        Curl Alternado con Disco o Mancuerna: 3 series de 12-15 repeticiones por brazo. <em>(Disco o Mancuernas)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Curl con Barra: 3 series de 12-15 repeticiones. (Barra)')">
-                                        Curl con Barra: 3 series de 12-15 repeticiones. <em>(Barra)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Tríceps:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Copa a Dos Manos con Disco: 3 series de 12-15 repeticiones. (Disco)')">
-                                        Copa a Dos Manos con Disco: 3 series de 12-15 repeticiones. <em>(Disco)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Patada de Mula: 3 series de 12-15 repeticiones por brazo. (Mancuernas)')">
-                                        Patada de Mula: 3 series de 12-15 repeticiones por brazo. <em>(Mancuernas)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Fondos: 3 series de 10-12 repeticiones. (Banco firme o Máquina de Fondos)')">
-                                        Fondos: 3 series de 10-12 repeticiones. <em>(Banco firme o Máquina de Fondos)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
-                                <strong>Estiramiento:</strong> Estiramiento general.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-
-            <!-- Miércoles -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Miércoles - Rutina
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" onclick="showAlert('Calentamiento: 15 minutos de caminata en la cinta o bicicleta estática.')">
-                                <strong>Calentamiento:</strong> 15 minutos de caminata en la cinta o bicicleta estática.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
-                                <strong>Movilidad:</strong> Estiramiento y movilidad articular.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Pierna:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Extensión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Extensión de Pierna)')">
-                                        Extensión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Extensión de Pierna)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Flexión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Flexión de Pierna)')">
-                                        Flexión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Flexión de Pierna)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. (Sin aparato)')">
-                                        Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. <em>(Sin aparato)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. (Sin aparato)')">
-                                        Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. <em>(Sin aparato)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Abductor: 3 series de 12-15 repeticiones. (Máquina de Abductores)')">
-                                        Abductor: 3 series de 12-15 repeticiones. <em>(Máquina de Abductores)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Aductor: 3 series de 12-15 repeticiones. (Máquina de Adductores)')">
-                                        Aductor: 3 series de 12-15 repeticiones. <em>(Máquina de Adductores)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Pantorrilla Sentada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Sentada)')">
-                                        Pantorrilla Sentada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Sentada)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Pantorrilla Parada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Parada o plataforma elevada)')">
-                                        Pantorrilla Parada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Parada o plataforma elevada)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Cardio: 30 minutos en bicicleta estática o caminadora.')">
-                                <strong>Cardio:</strong> 30 minutos en bicicleta estática o caminadora.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
-                                <strong>Estiramiento:</strong> Estiramiento general.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Jueves -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                        Jueves - Rutina
-                    </button>
-                </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" onclick="showAlert('Calentamiento: 30 minutos en bicicleta o caminadora.')">
-                                <strong>Calentamiento:</strong> 30 minutos en bicicleta o caminadora.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
-                                <strong>Movilidad:</strong> Estiramiento y movilidad articular.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Espalda:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Jalón al Frente: 3 series de 12-15 repeticiones. (Máquina de Jalón al Frente)')">
-                                        Jalón al Frente: 3 series de 12-15 repeticiones. <em>(Máquina de Jalón al Frente)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Jalón a la Cintura: 3 series de 12-15 repeticiones. (Máquina de Remo Sentado)')">
-                                        Jalón a la Cintura: 3 series de 12-15 repeticiones. <em>(Máquina de Remo Sentado)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Peck Deck Invertido (Reverse Fly): 3 series de 12-15 repeticiones. (Máquina Peck Deck - configurada para ejercicio de espalda)')">
-                                        Peck Deck Invertido (Reverse Fly): 3 series de 12-15 repeticiones. <em>(Máquina Peck Deck - configurada para ejercicio de espalda)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Pecho:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Peck Deck: 3 series de 12-15 repeticiones. (Máquina Peck Deck)')">
-                                        Peck Deck: 3 series de 12-15 repeticiones. <em>(Máquina Peck Deck)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Press en Máquina para Pecho (Agarre Cerrado): 3 series de 12-15 repeticiones. (Máquina de Press de Pecho)')">
-                                        Press en Máquina para Pecho (Agarre Cerrado): 3 series de 12-15 repeticiones. <em>(Máquina de Press de Pecho)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Press en Máquina para Pecho (Agarre Abierto): 3 series de 12-15 repeticiones. (Máquina de Press de Pecho)')">
-                                        Press en Máquina para Pecho (Agarre Abierto): 3 series de 12-15 repeticiones. <em>(Máquina de Press de Pecho)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
-                                <strong>Estiramiento:</strong> Estiramiento general.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Viernes -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                        Viernes - Rutina
-                    </button>
-                </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" onclick="showAlert('Calentamiento: 15 minutos de caminata en la cinta o bicicleta estática.')">
-                                <strong>Calentamiento:</strong> 15 minutos de caminata en la cinta o bicicleta estática.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Movilidad: Estiramiento y movilidad articular.')">
-                                <strong>Movilidad:</strong> Estiramiento y movilidad articular.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <strong>Pierna:</strong>
-                                <ul class="list-group">
-                                    <li class="list-group-item" onclick="showAlert('Extensión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Extensión de Pierna)')">
-                                        Extensión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Extensión de Pierna)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Flexión de Pierna: 3 series de 12-15 repeticiones. (Máquina de Flexión de Pierna)')">
-                                        Flexión de Pierna: 3 series de 12-15 repeticiones. <em>(Máquina de Flexión de Pierna)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. (Sin aparato)')">
-                                        Sentadilla Profunda con Peso Corporal: 3 series de 15 repeticiones. <em>(Sin aparato)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. (Sin aparato)')">
-                                        Desplante Fijo con Peso Corporal: 3 series de 12-15 repeticiones por pierna. <em>(Sin aparato)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Abductor: 3 series de 12-15 repeticiones. (Máquina de Abductores)')">
-                                        Abductor: 3 series de 12-15 repeticiones. <em>(Máquina de Abductores)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Aductor: 3 series de 12-15 repeticiones. (Máquina de Adductores)')">
-                                        Aductor: 3 series de 12-15 repeticiones. <em>(Máquina de Adductores)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Pantorrilla Sentada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Sentada)')">
-                                        Pantorrilla Sentada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Sentada)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                    <li class="list-group-item" onclick="showAlert('Pantorrilla Parada: 3 series de 15-20 repeticiones. (Máquina de Pantorrilla Parada o plataforma elevada)')">
-                                        Pantorrilla Parada: 3 series de 15-20 repeticiones. <em>(Máquina de Pantorrilla Parada o plataforma elevada)</em>
-                                        <i class="bi bi-info-circle" title="Más Información"></i>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Cardio: 30 minutos en bicicleta estática o caminadora.')">
-                                <strong>Cardio:</strong> 30 minutos en bicicleta estática o caminadora.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                            <li class="list-group-item" onclick="showAlert('Estiramiento: Estiramiento general.')">
-                                <strong>Estiramiento:</strong> Estiramiento general.
-                                <i class="bi bi-info-circle" title="Más Información"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         </div>
     </div>
 

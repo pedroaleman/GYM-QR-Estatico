@@ -50,49 +50,80 @@
             margin-bottom: 40px;
             color: #007bff;
         }
+
+        /* Sobrescribir estilo para el <hr> con clase 'linea' */
+       hr.linea {
+			border: 0 !important; /* Elimina cualquier borde */
+			height: 5px !important; /* Define el grosor de la línea */
+			background-color: #BB4A26 !important; /* Color sólido sin opacidad */
+			background-image: none !important; /* Asegura que no haya degradado aplicado */
+			background-repeat: no-repeat !important;
+			opacity: 1 !important; /* Asegura que no haya opacidad aplicada */
+			margin: 0 !important; /* Elimina cualquier margen que pueda estar afectando */
+		}
+
+
+        /* Margen superior para compensar el header fijo */
+        .content-padding {
+            padding-top: 70px; /* Ajusta este valor según la altura de tu header */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Título Principal -->	
-        <h5 class="p-3 mb-3 bg-dark text-white text-center shadow p-3 rounded mt-1">Principiantes</h5>
+       <header class="d-flex justify-content-between align-items-center fixed-top py-2 border-bottom bg-white">
+			<!-- Logo 1 alineado a la izquierda -->
+			<div class="ms-2 me-2" style="flex: 1;">
+				<img src="C:/GITHUB/GIMNASIO/QR Estatico/Imagenes/LogoGimnasio.png" alt="Logo 1" class="img-fluid">
+			</div>
+		</header>
 
-        <div class="row justify-content-center">
-            <!-- Card 1 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="Imagenes/Foto1.jpeg" class="card-img-top" alt="Fase 1 - Adaptación">
-                    <div class="card-body">
-                        <h5 class="card-title">Fase 1: Adaptación</h5>
-                        <p class="duration">Duración: 4 semanas</p>
-                        <p class="card-text">En esta fase, te enfocarás en aprender la técnica correcta y en preparar tu cuerpo para el entrenamiento intenso que sigue.</p>
-                        <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+
+        <!-- Espacio adicional para evitar que el contenido se superponga con el header fijo -->
+        <div class="content-padding">
+            <!-- Línea horizontal gruesa y naranja con clase 'linea' -->
+            <hr class="linea">
+
+            <!-- Título Principal -->
+            <h5 class="p-3 mb-3 mt-2 bg-dark text-white text-center shadow p-3 rounded">Principiantes</h5>
+
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="Imagenes/Foto1.jpeg" class="card-img-top" alt="Fase 1 - Adaptación">
+                        <div class="card-body">
+                            <h5 class="card-title">Fase 1: Adaptación</h5>
+                            <p class="duration">Duración: 4 semanas</p>
+                            <p class="card-text">En esta fase, te enfocarás en aprender la técnica correcta y en preparar tu cuerpo para el entrenamiento intenso que sigue.</p>
+                            <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="Imagenes/Foto2.jpeg" class="card-img-top" alt="Fase 2 - Fuerza y Resistencia">
-                    <div class="card-body">
-                        <h5 class="card-title">Fase 2: Fuerza y Resistencia</h5>
-                        <p class="duration">Duración: 4 semanas</p>
-                        <p class="card-text">Durante esta fase, aumentarás tu fuerza y resistencia, utilizando pesas más pesadas y ejercicios más desafiantes.</p>
-                        <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                <!-- Card 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="Imagenes/Foto2.jpeg" class="card-img-top" alt="Fase 2 - Fuerza y Resistencia">
+                        <div class="card-body">
+                            <h5 class="card-title">Fase 2: Fuerza y Resistencia</h5>
+                            <p class="duration">Duración: 4 semanas</p>
+                            <p class="card-text">Durante esta fase, aumentarás tu fuerza y resistencia, utilizando pesas más pesadas y ejercicios más desafiantes.</p>
+                            <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card">
-                    <img src="Imagenes/Foto3.jpeg" class="card-img-top" alt="Fase 3 - Consolidación y Progresión">
-                    <div class="card-body">
-                        <h5 class="card-title">Fase 3: Consolidación y Progresión</h5>
-                        <p class="duration">Duración: 4 semanas</p>
-                        <p class="card-text">La fase final se centra en consolidar los logros alcanzados y prepararte para desafíos más avanzados.</p>
-                        <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                <!-- Card 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="Imagenes/Foto3.jpeg" class="card-img-top" alt="Fase 3 - Consolidación y Progresión">
+                        <div class="card-body">
+                            <h5 class="card-title">Fase 3: Consolidación y Progresión</h5>
+                            <p class="duration">Duración: 4 semanas</p>
+                            <p class="card-text">La fase final se centra en consolidar los logros alcanzados y prepararte para desafíos más avanzados.</p>
+                            <a href="detalle.html" class="btn btn-primary w-100">Ver detalles</a>
+                        </div>
                     </div>
                 </div>
             </div>
